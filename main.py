@@ -73,6 +73,8 @@ def main(refresh=10):
             if event.type == pygame.QUIT:
                 pygame.quit()
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
                 if event.key == pygame.K_SPACE:
                     running = not running
                     pygame.display.set_caption("Game of life | running: " + str(running))
